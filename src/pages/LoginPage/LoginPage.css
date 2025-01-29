@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 40s linear infinite;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+@keyframes moveBackground {
+    0% {
+        background-position: 0% ;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+  }
+  .auth-container {
+    width: 350px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  h1 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+  }
+  input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  input:focus {
+    border-color: #4285F4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  button:hover {
+    background-color: #357ae8;
+    transform: scale(1.05);
+  }
+  
+  .google-btn {
+    display: block !important;
+    background-color: #db4437;
+    margin-top: 10px;
+  }
+  
+  .google-btn:hover {
+    background-color: #c1351d;
+  }
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    /* background-color: #0056b3; Темнее при наведении */
+    transform: scale(1.05);
+}
+
+a:active {
+
+    transform: scale(0.95);
+}
+
+  form {
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Анимация появления контейнера */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Скрытие формы */
+  .hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  form {
+      display: block !important;
+  }

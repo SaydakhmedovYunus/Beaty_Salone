@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="./GalleryPage.css">
+</head>
+<body>
+    <header>
+        <h1>Галерея</h1>
+    </header>
+<main>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3268732/pexels-photo-3268732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Фото 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3065207/pexels-photo-3065207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Фото 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3065208/pexels-photo-3065208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Фото 3">
+        </div>
+        <!-- Добавить больше элементов по необходимости -->
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+</main>
+    <footer>
+        <p>&copy; 2025 Салон красоты. Все права защищены.</p>
+    </footer>
+
+    <script src="./GalleryPage.js"></script>
+</body>
+</html>

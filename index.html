@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./src/assets/images/intro.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>Beaty | Salone</title>
+</head>
+<body>
+    <header>
+    <h2>Beaty | Salone</h2>
+    <nav>
+        <ul>
+            <li><a href="">Главная</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Услуги</button>
+                <div class="dropdown-content">
+                  <a href="./src/pages/HaircutPage/HaircutPage.html">Стрижка</a>
+                  <a href="./src/pages/ManicurePage/ManicurePage.html">Маникюр</a>
+                  <a href="./src/pages/ScincarePage/ScincarePage.html">Уход за кожей</a>
+                </div>
+              </div>
+            <li><a href="./src/pages/AboutUsPage/AboutUsPage.html">О нас</a></li>
+            <li><a href="./src/pages/GalleryPage/GalleryPage.html">Галерея</a></li>
+            <li><a href="./src/pages/ContactsPage/ContactsPage.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="burger_menu_side">
+        <a href="./src/pages/LoginPage/LoginPage.html">
+            <img src="./src/assets/images/registration.png" alt="barbershop" class="logo_image">
+        </a>
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+        <label class="burger" for="burger-checkbox" id="open-modal"></label>
+        <img src="./src/assets/images/night.png" alt="night_mode-img" class="night-mode-img" id="changeTheme">        
+    </div>   
+    </header>
+    <div class="burger_menu_wrapper">
+        <nav>
+            <ul>
+                <li><a href="">Main</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Services</button>
+                    <div class="dropdown-content">
+                      <a href="#">Haircut</a>
+                      <a href="#">Manicure</a>
+                      <a href="#">Scincare</a>
+                    </div>
+                  </div>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="main-section">
+            <div class="content">
+                <h1>Ваш стиль начинается здесь</h1>
+                <p>Профессиональные услуги красоты: парикмахерские, маникюр, уход за кожей и многое другое.</p>
+                <button>Записаться онлайн</button>
+                <div class="features">
+                    <div>
+                        <span>✂</span>
+                        <p>Профессиональные мастера</p>
+                    </div>
+                    <div>
+                        <span>🌸</span>
+                        <p>Уютная атмосфера</p>
+                    </div>
+                    <div>
+                        <span>🕒</span>
+                        <p>Удобный график работы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Второй экран -->
+<section class="features-section">
+    <h2 class="features-title">Почему выбирают нас?</h2>
+    <div class="features-grid" id="features-container">
+
+    </div>
+    <button class="feature-button" id="show-more">Посмотреть ещё</button>
+</section>
+
+<section class="news-section">
+    <h2>Новости и События</h2>
+    
+    <div class="news-grid" id="news-container">
+        <!-- Новости будут добавляться сюда через JavaScript -->
+    </div>
+    
+    <button class="view-all-button" id="view-all-news">Посмотреть все события</button>
+</section>
+
+<section class="team">
+    <h2>Наша команда профессионалов</h2>
+    <p>Познакомьтесь с мастерами, которые создают вашу красоту</p>
+    
+    <div class="team-grid" id="team-container">
+      <!-- Карточка мастера -->
+    </div>
+    
+    <div class="pagination"></div>
+  </section>
+</main>
+  
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>Телефон: +7 (000) 000-00-00</p>
+            <p>Email: info@salon.com</p>
+        </div>
+        <div class="footer-section">
+            <h4>Следите за нами</h4>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Полезные ссылки</h4>
+            <ul>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Beaty | Salone. Все права защищены.</p>
+    </div>
+</footer>
+  
+    <script defer src="./script.js"></script>
+    <script defer src="./src/components/features-components.js"></script>
+    <script defer src="./src/components/news-components.js"></script>
+    <script defer src="./src/components/team-components.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>

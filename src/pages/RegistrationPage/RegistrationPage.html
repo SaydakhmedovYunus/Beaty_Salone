@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Beaty Salone</title>
+    <link rel="icon" href="../../assets/images/intro.png" type="image/x-icon">
+    <link rel="stylesheet" href="./RegistrationPage.css">
+    <!-- Подключаем старую версию Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Зарегистрироваться</h1> 
+        <!-- Форма для регистрации -->
+        <form id="sign-up-form">
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Пароль" required>
+          <button type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+    
+      <script>
+        // Конфигурация Firebase
+        const firebaseConfig = {
+          apiKey: "AIzaSyBkq_Eial8guA7GiLBjXam5rRzEknDOA_s",
+          authDomain: "your-auth-domain",
+          projectId: "your-project-id",
+          storageBucket: "your-storage-bucket",
+          messagingSenderId: "your-sender-id",
+          appId: "your-app-id"
+        };
+    
+        // Инициализация Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    
+        const signUpForm = document.getElementById('sign-up-form');
+    
+        // Регистрация пользователя
+        signUpForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+    
+          auth.createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+              console.log('User signed up:', userCredential.user);
+              alert('Регистрация прошла успешно');
+              window.location.href = "../LoginPage/LoginPage.html"; // Перенаправление
+            })
+            .catch((error) => {
+              console.error('Error during sign-up:', error.message);
+              alert('Ошибка регистрации' + error.message); // покажем сообщение об ошибке
+            });
+        });
+        // Слушатель изменения состояния пользователя
+        auth.onAuthStateChanged((user) => {
+          if (user) {
+            alert('Добро пожаловать, ' + user.email);
+            // Если пользователь уже авторизован, перенаправляем его на главную
+            if (window.location.pathname !== "../LoginPage/LoginPage.html") { // чтобы избежать циклического перенаправления
+              window.location.href = '../LoginPage/LoginPage.html';
+            }
+          }
+        });
+      </script>
+    <script src="./RegisterPage.ts"></script>
+</body>
+</html>
+
+
+
+<!-- <p class="error-message" id="error-message"></p>
+
+<p class="login-link">
+    Уже есть аккаунт? <a href="../LoginPage/LoginPage.html">Войти</a>
+</p> -->

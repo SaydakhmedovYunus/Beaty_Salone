@@ -1,0 +1,7 @@
+Первое дело отрисовал header 
+подключил dropDown
+подключил burgerMenu 
+подключил nighTheme
+
+
+У каждой карточки есть свой id к примеру id maria, id annna, id natasha
