@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Пример функций для кнопок "Подробнее" и "Записаться"
 function openMasterDetails(id) {
-  window.location.href = `../../pages/MasterDetailsPage/MasterDetailsPage.html?id=${id}`;
+  window.location.href = `../pages/ManicurePage/ManicurePage.html?id=${id}`;
   // alert(id);
   
 }
