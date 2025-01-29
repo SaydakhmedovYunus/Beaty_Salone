@@ -19,7 +19,6 @@
         <input type="password" id="sign-in-password" placeholder="Пароль" required>
         <button type="submit">Войти</button>
       </form>
-      
   
       <!-- Кнопка для входа через Google -->
       <button id="google-sign-in" class="google-btn" style="display: none;">Войти через Google</button>
@@ -54,7 +53,7 @@
             .then((userCredential) => {
               console.log('User signed in:', userCredential.user);
               alert('Вход выполнен');
-              window.location.href = `/index.html`; // Перенаправление
+              window.location.href = `../../../index.html`; // Перенаправление
             })
             .catch((error) => {
               console.error('Error during sign-in:', error.message);
